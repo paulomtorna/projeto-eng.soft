@@ -8,18 +8,30 @@ O Padrão Singleton tem como definição garantir que uma classe tenha apenas um
 
 O Padrão Singleton pode ser instanciada e usada apenas quando necessário, diferentemente se criássemos uma variável global em que o objeto é sempre criado quando o aplicativo é inicializado e poderá estar usando recursos que não são necessários neste momento. O padrão Singleton define um ponto único de acesso global sendo inclusive muito mais de gerenciar a criação e utilização da instância.
 
-#Benefícios
+##Benefícios
 
 Permite o controle sobre como e quando os clientes acessam a instância.
 Várias classes singleton podem obedecer uma mesma interface, permitindo assim que um singleton em particular seja escolhido para trabalhar com uma determinada aplicação em tempo de execução.
 Com apenas uma implementação interna do singleton pode-se fazer com que o singleton crie um número controlado de instâncias.
 É mais flexível que métodos estáticos por permitir o polimorfismo.
 
-#Contras
+##Contras
 
 Acoplamento: Usando Singleton você estará acoplando o seu código em uma implementação estática e específica. Isso faz o seu código dependente dessa classe e impede, por exemplo, criar mocks em testes unitários.
 Escopo: Se você por alguma razão decidir que para determinado componente da aplicação você precisa de outra implementação terá que alterar manualmente todas as classes.
 Falsa segurança: No java, por exemplo, não existe uma classe apenas por JVM. O conceito de carregamento de classes em java é feito por ClassLoader.
+
+##Como fazer a implementação do Singleton
+
+1. Deixar o construtor privado, pois assim ninguém deve conseguir instanciar a classe, apenas o próprio Singleton.
+
+2. Criar um atributo público e estático do mesmo tipo da classe (instance). Algumas linguagens não tipadas não irão precisar do tipo, caso do PHP, por exemplo.
+
+3. Método getInstance() é o principal ponto da classe. Ele verifica se a variável instance já foi iniciada, caso não tenha sido, ele faz sua criação pela primeira e única vez.
+
+4. Para fazer a conexão, devemos chamar o getInstance da seguinte forma: ClasseSingleton.getInstance().
+
+
 
 ##Conclusão
 
