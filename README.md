@@ -8,18 +8,19 @@ O Padrão Singleton tem como definição garantir que uma classe tenha apenas um
 
 O Padrão Singleton pode ser instanciada e usada apenas quando necessário, diferentemente se criássemos uma variável global em que o objeto é sempre criado quando o aplicativo é inicializado e poderá estar usando recursos que não são necessários neste momento. O padrão Singleton define um ponto único de acesso global sendo inclusive muito mais de gerenciar a criação e utilização da instância.
 
-Beneficios
+#Benefícios
 
-    Permite o controle sobre como e quando os clientes acessam a instРncia.
-    Vрrias classes singleton podem obedecer uma mesma interface, permitindo assim que um singleton em particular seja escolhido para trabalhar com uma determinada aplicaусo em tempo de execuусo.
-    Com apenas uma implementaусo interna do singleton pode-se fazer com que o singleton crie um nЩmero controlado de instРncias.
-    ╔ mais flexьvel que mжtodos estрticos por permitir o polimorfismo.
+    Permite o controle sobre como e quando os clientes acessam a instância.
+    Várias classes singleton podem obedecer uma mesma interface, permitindo assim que um singleton em particular seja escolhido para trabalhar com uma determinada aplicação em tempo de execução.
+    Com apenas uma implementação interna do singleton pode-se fazer com que o singleton crie um número controlado de instâncias.
+    É mais flexível que métodos estáticos por permitir o polimorfismo.
 
-Contras
+#Contras
 
-    Acoplamento: Usando Singleton vocЖ estarр acoplando o seu cзdigo em uma implementaусo estрtica e especьfica. Isso faz o seu cзdigo dependente dessa classe e impede, por exemplo, criar mocks em testes unitрrios.
-    Escopo: Se vocЖ por alguma razсo decidir que para determinado componente da aplicaусo vocЖ precisa de outra implementaусo terр que alterar manualmente todas as classes.
-    Falsa seguranуa: No java, por exemplo, nсo existe uma classe apenas por JVM. O conceito de carregamento de classes em java ж feito por ClassLoader.
+    Acoplamento: Usando Singleton você estará acoplando o seu código em uma implementação estática e específica. Isso faz o seu código dependente dessa classe e impede, por exemplo, criar mocks em testes unitários.
+    Escopo: Se você por alguma razão decidir que para determinado componente da aplicação você precisa de outra implementação terá que alterar manualmente todas as classes.
+    Falsa segurança: No java, por exemplo, não existe uma classe apenas por JVM. O conceito de carregamento de classes em java é feito por ClassLoader.
+
 
 
 
